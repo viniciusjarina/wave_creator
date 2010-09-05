@@ -1,0 +1,305 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Criado por Vinicius Jarina (viniciusjarina@gmail.com)"
+            VALUE "CompanyName", "JarinSoft"
+            VALUE "FileDescription", "Wave Creator - Ferramenta para criação de arquivos WAVE."
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "WaveCreator.exe"
+            VALUE "LegalCopyright", "(c) JarinSoft.  All rights reserved."
+            VALUE "OriginalFilename", "WaveCreator.exe"
+            VALUE "ProductName", "Wave Creator"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 183, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Wave Creator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Wave Creator, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010 - JarinSoft",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,126,62,50,14,WS_GROUP
+    LTEXT           "http://viniciusjarina.googlepages.com",IDC_STATIC_LINK,41,45,122,8
+END
+
+IDD_WAVECREATOR_DIALOG DIALOGEX 0, 0, 230, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Wave Creator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Modo:",IDC_STATIC,14,17,21,8
+    COMBOBOX        IDC_CB_KIND,37,15,98,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Static",IDC_STATIC_PLACE,13,30,202,58,NOT WS_VISIBLE,WS_EX_STATICEDGE
+    GROUPBOX        "&Modo de criação",IDC_STATIC,7,3,215,93
+    GROUPBOX        "S&aída",IDC_STATIC,7,100,214,84
+    LTEXT           "Static",IDC_CTRL_WAVE,13,111,201,40,0,WS_EX_CLIENTEDGE
+    LTEXT           "0",IDC_STATIC_START,14,152,8,8
+    LTEXT           "1",IDC_STATIC_END,211,153,8,8
+    PUSHBUTTON      "&<<",IDC_BUTTON4,13,164,20,14
+    PUSHBUTTON      "&>>",IDC_BUTTON5,33,164,20,14
+    PUSHBUTTON      "&Testar",IDC_BUTTON3,165,164,50,14
+    PUSHBUTTON      "&Opções...",IDC_BUTTON2,7,188,50,14
+    PUSHBUTTON      "Salvar &Wave...",IDC_SAVE_AS,102,188,58,14
+    PUSHBUTTON      "Salvar &CSV...",IDC_SAVE_AS2,163,188,58,14
+END
+
+IDD_PANE_FIX_WAVE DIALOGEX 0, 0, 205, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Se&noidal",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,12,43,10
+    CONTROL         "&Quadrada",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,9,23,48,10
+    CONTROL         "&Triangular",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,9,34,48,10
+    CONTROL         "&Dente de serra",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,9,45,64,10
+    GROUPBOX        "Tipo de onda",IDC_STATIC,0,0,86,58,WS_GROUP
+    GROUPBOX        "Opções",IDC_STATIC,89,0,112,58
+    LTEXT           "&Freqüência:",IDC_STATIC,94,14,39,8
+    EDITTEXT        IDC_ED_FREQ,134,11,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HOTTRACK,174,6,10,14
+    LTEXT           "Hz",IDC_STATIC,177,14,9,8
+    LTEXT           "T&empo:",IDC_STATIC,94,31,25,8
+    EDITTEXT        IDC_ED_TIME,134,28,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HOTTRACK,173,33,10,14
+    LTEXT           "s",IDC_STATIC,177,30,8,8
+END
+
+IDD_PANE_CSV_FILE DIALOGEX 0, 0, 205, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "&Arquivo de entrada",IDC_STATIC,0,0,203,58,WS_GROUP
+    LTEXT           "Ca&minho:",IDC_STATIC,6,16,31,8
+    EDITTEXT        IDC_EDIT1,37,14,135,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,174,14,22,14
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 207, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Opções"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,97,75,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,75,50,14
+    GROUPBOX        "Opções do arquivo Wave",IDC_STATIC,7,7,193,63
+    LTEXT           "Taxa de amostragem",IDC_STATIC,36,23,68,8
+    EDITTEXT        IDC_EDIT1,106,20,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Bits por amostra",IDC_STATIC,36,40,53,8
+    COMBOBOX        IDC_COMBO1,105,39,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_WAVECREATOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\WaveCreator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WaveCreator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WAVECREATOR_DIALOG DLGINIT
+BEGIN
+    IDC_CB_KIND, 0x403, 10, 0
+0x6e4f, 0x6164, 0x6620, 0x7869, 0x0061, 
+    IDC_CB_KIND, 0x403, 12, 0
+0x7241, 0x7571, 0x7669, 0x206f, 0x5343, 0x0056, 
+    0
+END
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO1, 0x403, 3, 0
+0x3631, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&Sobre Wave Creator..."
+    IDS_FILE_OPEN_ALL       "Todos Arquivos (*.*)|*.*||"
+    IDS_FILE_OPEN_WAV       "Arquivos Wave (*.wav)|*.wav||"
+    IDS_FILE_OPEN_CSV       "Arquivos CSV (*.csv)|*.csv|Arquivo TXT(*.txt)|*.txt||"
+    IDS_DEFAULT_NAME        "Wave.wav"
+    IDS_DEFAULT_CSV         "Wave.csv"
+END
+
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\WaveCreator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
